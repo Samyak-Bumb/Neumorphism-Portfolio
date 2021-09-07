@@ -1,0 +1,75 @@
+.style-switcher{
+    position: fixed;
+    right: 0;
+    top: 77px;
+    padding: 15px;
+    width: 200px;
+    z-index: 101;
+    transition: all .3s ease;
+    border-radius: 5px;
+    transform: translateX(100%);
+}
+.style-switcher.open{
+    transform: translateX(0);
+
+}
+.style-switcher .s-icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--black-900);
+    right: 100%;
+    margin-right: 15px;
+    transition: .3s ease;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.style-switcher .s-icon::after{
+    border-radius: 50%;
+}
+.style-switcher .s-icon i{
+    line-height: 40px;
+}
+.style-switcher .style-switcher-toggler{
+    top: 0;
+}
+.style-switcher .night-day{
+    top: 55px;
+}
+.style-switcher h4{
+    margin-bottom: 10px;
+    color:var(--black-700);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+.style-switcher .colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.style-switcher .colors span{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.style-switcher span.red{
+    background-color: #cc3a3b;
+}
+.style-switcher span.blue{
+    background-color: #2eb1ed;
+}
+.style-switcher span.green{
+    background-color: #1fc586;
+}
+.style-switcher span.yellow{
+    background-color: #ffb400;
+}
+.style-switcher span.orange{
+    background-color: #e67e22;
+}
