@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
     --black-50 : #eff0f4;
     --black-50-opacity:rgba(255,255,255,.5);
@@ -94,7 +94,7 @@ button{
     box-shadow: var(--outer-shadow-0);
 }
 .hover-in-shadow:after{
-    content: "";
+    content: ' ';
     position: absolute;
     top: 0;
     left: 0;
@@ -193,7 +193,7 @@ button{
     animation: spin 15s linear infinite;
 }
 .effect-4::before{
-    content: "";
+    content: ' ';
     border-top: 30px solid transparent;
     border-left: 30px solid #06d79c;
     opacity: .5;
@@ -414,8 +414,11 @@ preloader
     right: 15px;
     font-size: 35px;
     color: var(--black-600);
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+.nav-menu-close:hover{
+    cursor: pointer;
+    color: var(--skin-color);
 }
 .nav-menu-close::after{
     border-radius: 50%;
@@ -511,6 +514,7 @@ preloader
     width: 100%;
     border-radius: 50%;
     border: 10px solid transparent;
+    -webkit-user-drag: none;
 }
 .about-section{
     padding:80px 0;
@@ -650,7 +654,7 @@ preloader
     position: relative;
 }
 .about-section .timeline::before{
-    content: "";
+    content: ' ';
     height: 100%;
     width: 1px;
     position: absolute;
@@ -676,7 +680,7 @@ preloader
     position: relative;
 }
 .about-section .timeline .timeline-item-inner::before{
-    content: "";
+    content: ' ';
     width: 30px;
     height: 1px;
     position: absolute;
