@@ -5,13 +5,12 @@
     padding: 15px;
     width: 200px;
     z-index: 101;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     border-radius: 5px;
     transform: translateX(100%);
 }
 .style-switcher.open{
     transform: translateX(0);
-
 }
 .style-switcher .s-icon{
     position: absolute;
@@ -70,6 +69,6 @@
 .style-switcher span.yellow{
     background-color: #ffb400;
 }
-.style-switcher span.orange{
-    background-color: #e67e22;
+.style-switcher span.pink{
+    background-color: #fb839e;
 }
