@@ -1,20 +1,19 @@
-@media (max-width:991px){
-    .services-section .services-item{
-        flex: 0 0 50%;
-        max-width: 50%;
+@media(max-width:575px){
+    .home-section .home-text h1{
+        font-size: 40px;
     }
-    /* Portfolio Section */
-    .portfolio-section .portfolio-item{
-        flex: 0 0 50%;
-        max-width: 50%;
+    .home-section .home-img .img-box{
+        max-width: 260px;
+    }
+    .effect-3{
+        margin-left: -100px;
     }
 }
 @media(max-width: 767px){
     .row.full-screen{
         padding: 100px 0;
     }
-    .home-section .home-text,
-    .home-section .home-img{
+    .home-section .home-text, .home-section .home-img{
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -35,8 +34,7 @@
     .effect-5{
         right: 10%;
     }
-    .about-section .about-info,
-    .about-section .about-img{
+    .about-section .about-info, .about-section .about-img{
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -82,13 +80,11 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-    /* Portfolio Section */
     .portfolio-section .portfolio-item{
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .portfolio-popup .description,
-    .portfolio-popup .info{
+    .portfolio-popup .description, .portfolio-popup .info{
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -107,15 +103,13 @@
         text-align: center;
     }
 }
-@media(max-width:575px){
-    /* Home Section */
-    .home-section .home-text h1{
-        font-size: 40px;
+@media (max-width:991px){
+    .services-section .services-item{
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-    .home-section .home-img .img-box{
-        max-width: 260px;
-    }
-    .effect-3{
-        margin-left: -100px;
+    .portfolio-section .portfolio-item{
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
