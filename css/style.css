@@ -1270,7 +1270,7 @@ Portfolio Popup
     border: none;
     border-radius: 30px;
     font-size: 16px;
-    color: var(--black-700);
+    color: var(--skin-color);
 }
 .contact-section .input-group textarea.input-control{
     height: 184px;
@@ -1282,4 +1282,14 @@ Portfolio Popup
     max-width: 100%;
     text-align: right;
     padding: 0 15px;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track::after{
+    background-color: var(--black-900);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: var(--skin-color);
 }
