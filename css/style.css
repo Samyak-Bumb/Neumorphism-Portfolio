@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
-    --black-50 : #eff0f4;
-    --black-50-opacity:rgba(255,255,255,.5);
-    --black-100 : #dddddd;
-    --black-300 : #bbbbbb;
-    --black-600 : #666666;
-    --black-700 : #555555;
-    --black-900 : #000000;
-    --outer-shadow : 3px 3px 3px #d0d0d0,-3px -3px 3px #f8f8f8;
-    --outer-shadow-0 : 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-    --inner-shadow : inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
-    --inner-shadow-0 : inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+    --black-50: #eff0f4;
+    --black-50-opacity: rgba(255, 255, 255, .5);
+    --black-100: #dddddd;
+    --black-300: #bbbbbb;
+    --black-600: #666666;
+    --black-700: #555555;
+    --black-900: #000000;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 body.dark{
-    --black-50 : #2b2c2f;
-    --black-50-opacity:rgba(43,44,47,.5);
-    --black-100 : #353535;
-    --black-600 : #bbbbbb;
-    --black-700 : #ffffff;
-    --black-900 : #ffffff;
-    --outer-shadow : 3px 3px 3px #222327,-3px -3px 3px #363636;
-    --outer-shadow-0 : 0 0 0 #222327, 0 0 0 #363636;
-    --inner-shadow : inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
-    --inner-shadow-0 : inset 0 0 0 #222327, inset 0 0 0 #363636;
+    --black-50: #2b2c2f;
+    --black-50-opacity: rgba(43, 44, 47, .5);
+    --black-100: #353535;
+    --black-600: #bbbbbb;
+    --black-700: #ffffff;
+    --black-900: #ffffff;
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
 *{
     padding: 0;
@@ -34,7 +34,7 @@ body.dark{
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
-::after,::before{
+::after, ::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,10 +42,10 @@ body.dark{
 body{
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
-    overflow-x: hidden;
     line-height: 1.5;
     background-color: var(--black-50);
     transition: 0.3s ease-in;
+    overflow-x: hidden;
 }
 body.stop-scrolling{
     overflow: hidden;
@@ -99,7 +99,7 @@ button{
     left: 0;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     z-index: -1;
 }
 .hover-in-shadow:hover:after{
@@ -109,16 +109,17 @@ button{
     box-shadow: var(--inner-shadow);
 }
 .btn-1{
+    display: inline-block;
     padding: 10px 25px;
     color: var(--skin-color);
     font-size: 16px;
     font-weight: 500;
     background-color: transparent;
     line-height: 1.5;
-    cursor: pointer;
     border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
+}
+.btn-1:hover{
+    cursor: pointer;
 }
 .btn-1::after{
     border-radius: 30px;
@@ -130,9 +131,9 @@ button{
 .effect-1{
     width: 30px;
     height: 30px;
-    border:4px solid #8a49ff;
     bottom: 15%;
     right: 10%;
+    border: 4px solid #8a49ff;
     animation: spin 10s linear infinite;
 }
 @keyframes spin{
@@ -144,46 +145,56 @@ button{
     }
 }
 .effect-2{
+    display: flex;
+    width: 40px;
     left: 2%;
     bottom: 20%;
-    width: 40px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    animation: TopBottom 3s ease infinite;
+    flex-wrap: wrap;
+    animation: TB 3s ease infinite;
+    /* !important (TB=TopBottom)*/
 }
-.effect-2 div{
-    height: 3px;
-    width: 3px;
-    background-color: #ff9c07;
-    margin: 0 3px 8px;
-}
-@keyframes TopBottom{
-    0%,100%{
+@keyframes TB
+/* !important */
+{
+    0%,
+    100%{
         transform: translateY(0);
     }
     50%{
         transform: translateY(25px);
     }
 }
+.effect-2 div{
+    margin: 0 3px 8px;
+    width: 3px;
+    height: 3px;
+    background-color: #ff9c07;
+}
+/* ------------------------------imp------------------------------ */
 .effect-3{
-    height: 200px;
     width: 200px;
-    border: 25px solid var(--skin-color);
-    opacity: .8;
-    border-radius: 50%;
+    height: 200px;
     top: -120px;
     left: 50%;
-    animation: LeftRight 3s ease-in-out infinite;
+    border: 25px solid var(--skin-color);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: LR 3s ease-in-out infinite;
+    /* !important (LR=LeftRight)*/
 }
-@keyframes LeftRight{
-    0%,100%{
+@keyframes LR
+/* !important */
+{
+    0%,
+    100%{
         transform: translateX(0);
     }
     50%{
         transform: translateX(25px);
     }
 }
+/* ------------------------------imp------------------------------ */
 .effect-4{
     border-top: 30px solid transparent;
     border-left: 30px solid #06d79c;
@@ -193,20 +204,20 @@ button{
 }
 .effect-4::before{
     content: ' ';
+    position: absolute;
+    top: -25px;
+    left: -35px;
     border-top: 30px solid transparent;
     border-left: 30px solid #06d79c;
-    opacity: .5;
-    position: absolute;
-    left: -35px;
-    top: -25px;
+    opacity: 0.5;
 }
 .effect-5{
+    overflow: hidden;
+    display: flex;
     width: 50px;
     height: 50px;
     right: 12%;
     top: 30%;
-    overflow: hidden;
-    display: flex;
     border-radius: 50%;
     animation: spin 5s linear infinite;
 }
@@ -231,12 +242,12 @@ button{
     margin: 0;
 }
 .section-title h2::before{
-    content: attr(data-heading);
     display: block;
+    margin: 0;
+    content: attr(data-heading);
+    color: var(--skin-color);
     font-size: 16px;
     font-weight: 600;
-    color: var(--skin-color);
-    margin: 0;
 }
 .section.hide{
     display: none;
@@ -244,7 +255,6 @@ button{
 .section.active{
     display: block;
 }
-
 @keyframes fadInTop{
     0%{
         opacity: 0;
@@ -292,7 +302,8 @@ button{
     animation-delay: .2s;
 }
 @keyframes loadersamyak{
-    0%,100%{
+    0%,
+    100%{
         transform: translateY(0);
     }
     50%{
@@ -325,26 +336,28 @@ button{
     height: 40px;
     display: flex;
     border-radius: 50%;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
+}
+.header .menu:hover{
+    cursor: pointer;
 }
 .header .menu::after{
     content: ' ';
     border-radius: 50%;
 }
 .header .menu span{
+    position: relative;
     width: 14px;
     height: 2px;
     background-color: var(--black-900);
-    position: relative;
 }
 .header .menu span::before{
     content: ' ';
+    position: absolute;
     width: 18px;
     height: 2px;
-    background-color: var(--black-900);
-    position: absolute;
     top: 7px;
+    background-color: var(--black-900);
 }
 .header .menu span::after{
     content: ' ';
@@ -355,34 +368,34 @@ button{
     bottom: 7.2px;
 }
 .nav-menu{
-    position: fixed;
-    z-index: -1;
-    opacity: 0;
+    overflow-y: auto;
     visibility: hidden;
+    position: fixed;
     padding: 0 15px;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
     background-color: var(--black-50);
-    overflow-y: auto;
 }
 .fade-out-effect{
+    visibility: hidden;
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--black-50);
     z-index: -1;
     opacity: 0;
-    visibility: hidden;
+    background-color: var(--black-50);
 }
 .fade-out-effect.active{
+    visibility: visible;
     z-index: 1000;
     opacity: 1;
-    visibility: visible;
-    animation: fadeOut .3s ease-out;
+    animation: fadeOut 0.3s ease-out;
 }
 @keyframes fadeOut{
     0%{
@@ -400,15 +413,15 @@ button{
 }
 .nav-menu-close{
     user-select: none;
-    height: 40px;
-    width: 40px;
     display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
     text-align: center;
     line-height: 36px;
     border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    right: 15px;
     font-size: 35px;
     color: var(--black-600);
     transition: all 0.3s ease-in-out;
@@ -421,8 +434,8 @@ button{
     border-radius: 50%;
 }
 .nav-menu-inner{
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
 }
 .nav-menu-inner ul{
     padding: 15px;
@@ -437,11 +450,11 @@ button{
 .nav-menu-inner ul li a{
     user-select: none;
     display: inline-block;
+    padding: 5px 30px;
+    text-transform: capitalize;
     font-size: 28px;
     font-weight: 600;
     color: var(--black-600);
-    padding: 5px 30px;
-    text-transform: capitalize;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
 }
@@ -461,8 +474,7 @@ button{
     transform: translateY(-50%) rotate(-90deg);
     color: var(--black-600);
 }
-.copyright i ,
-.copyright a{
+.copyright i, .copyright a{
     color: var(--skin-color);
 }
 .home-section{
@@ -472,24 +484,27 @@ button{
     padding: 50px 0;
     min-height: 100vh;
 }
-.home-section .home-text,
-.home-section .home-img{
+.home-section .home-text, .home-section .home-img{
     flex: 0 0 50%;
     max-width: 50%;
     padding: 0 15px;
 }
 .home-section .home-text p{
-    color: var(--black-300);
-    font-size: 18px;
-    text-transform: capitalize;
     margin: 0;
-
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black-300);
+    text-transform: capitalize;
 }
 .home-section .home-text h1{
+    margin: 0;
     font-size: 55px;
     font-weight: 700;
     color: var(--black-900);
-    margin: 0;
+}
+.home-section .home-text h1::selection{
+    background: var(--skin-color);
+    color: var(--black-900);
 }
 .home-section .home-text h2{
     font-size: 20px;
@@ -514,7 +529,7 @@ button{
     -webkit-user-drag: none;
 }
 .about-section{
-    padding:80px 0;
+    padding: 80px 0;
     min-height: 100vh;
 }
 .about-section .about-img{
@@ -580,14 +595,16 @@ button{
 .about-section .about-tabs .tab-item{
     display: inline-block;
     margin: 0 5px 10px;
-    cursor: pointer;
     padding: 5px 10px;
     border-radius: 30px;
     color: var(--black-600);
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
-    transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out;
+}
+.about-section .about-tabs .tab-item:hover{
+    cursor: pointer;
 }
 .about-section .about-tabs .tab-item.active{
     box-shadow: var(--outer-shadow);
@@ -605,7 +622,7 @@ button{
     display: block;
     animation: fadInTop .5s ease;
 }
-.about-section .skills {
+.about-section .skills{
     padding-bottom: 40px;
 }
 .about-section .skills .skill-item{
@@ -641,8 +658,7 @@ button{
     color: var(--black-600);
     font-weight: 500;
 }
-.about-section .education,
-.about-section .experience{
+.about-section .education, .about-section .experience{
     padding-bottom: 80px;
 }
 .about-section .timeline{
@@ -705,7 +721,7 @@ button{
     top: 18px;
 }
 .about-section .timeline .timeline-item:nth-child(odd) .icon{
-    right:-71px ;
+    right: -71px;
 }
 .about-section .timeline .timeline-item:nth-child(even) .icon{
     left: -69px;
@@ -736,7 +752,7 @@ button{
     margin-top: 15px;
 }
 .services-section{
-    padding:80px 0;
+    padding: 80px 0;
     min-height: 100vh;
 }
 .services-section .services-item{
@@ -744,7 +760,6 @@ button{
     max-width: 33.33%;
     padding: 15px;
     border-radius: 5px;
-
 }
 .services-section .services-item-inner:hover{
     transform: translateY(-15px);
@@ -824,28 +839,29 @@ Portfolio Section
     display: inline-block;
     margin: 0 5px 10px;
     padding: 5px 10px;
-    cursor: pointer;
     border-radius: 30px;
     color: var(--black-600);
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
-    transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out;
+}
+.portfolio-section .portfolio-tabs .tab-item:hover{
+    cursor: pointer;
 }
 .portfolio-section .portfolio-tabs .tab-item.active{
     box-shadow: var(--outer-shadow);
     color: var(--skin-color);
 }
 .portfolio-section .portfolio-tabs .tab-item:hover:not(.active){
-    opacity: .6;
+    opacity: 0.6;
 }
-
 .portfolio-section .portfolio-item{
+    display: flex;
     flex: 0 0 33.33%;
+    flex-wrap: wrap;
     max-width: 33.33%;
     padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
 }
 .portfolio-section .portfolio-item.hide{
     display: none;
@@ -856,9 +872,11 @@ Portfolio Section
 }
 .portfolio-section .portfolio-item-inner{
     padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
     width: 100%;
+    border-radius: 5px;
+}
+.portfolio-section .portfolio-item-inner:hover{
+    cursor: pointer;
 }
 .portfolio-section .portfolio-item-inner .portfolio-item-img{
     position: relative;
@@ -869,19 +887,18 @@ Portfolio Section
     width: 100%;
     height: 220px;
     transition: 0.3s ease;
-
 }
 .portfolio-section .portfolio-item-inner:hover .portfolio-item-img img{
     transform: translateY(-25px);
 }
 .portfolio-section .portfolio-item-inner .portfolio-item-img .view-project{
+    position: absolute;
+    left: 4px;
+    bottom: -4px;
     font-size: 16px;
     font-weight: 500;
-    color: var(--skin-color);
     text-transform: capitalize;
-    position: absolute;
-    bottom: -4px;
-    left: 4px;
+    color: var(--skin-color);
     transform: translateY(-5px);
     transition: 0.3s ease;
     opacity: 0;
@@ -899,9 +916,6 @@ Portfolio Section
     text-transform: capitalize;
     margin-top: 10px;
 }
-/* ===========
-Portfolio Popup
-============ */
 .portfolio-popup{
     background-color: var(--black-50);
     position: fixed;
@@ -944,7 +958,7 @@ Portfolio Popup
     border: 4px solid var(--skin-color);
     border-radius: 50%;
     border-right: 4px solid transparent;
-    animation: spin .5s linear infinite;
+    animation: spin 0.5s linear infinite;
 }
 .portfolio-popup .pp-details{
     max-width: 1350px;
@@ -957,7 +971,6 @@ Portfolio Popup
 }
 .portfolio-popup .pp-details.active{
     opacity: 1;
-
 }
 .portfolio-popup .pp-details-inner{
     padding: 30px 0;
@@ -1023,7 +1036,6 @@ Portfolio Popup
 .portfolio-popup .info ul li:last-child{
     margin-bottom: 0;
 }
-
 .portfolio-popup .separator{
     height: 1px;
     width: 100%;
@@ -1055,6 +1067,8 @@ Portfolio Popup
     padding: 0 15px;
     border-radius: 30px;
     transition: 0.3s ease;
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-details-btn:hover{
     cursor: pointer;
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-details-btn i{
@@ -1075,6 +1089,8 @@ Portfolio Popup
     line-height: 37px;
     color: var(--black-600);
     transition: 0.3s ease;
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-close:hover{
     cursor: pointer;
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-close::after{
@@ -1096,8 +1112,7 @@ Portfolio Popup
     font-size: 16px;
     color: var(--black-600);
 }
-.portfolio-popup .pp-main .pp-main-inner .pp-prev,
-.portfolio-popup .pp-main .pp-main-inner .pp-next{
+.portfolio-popup .pp-main .pp-main-inner .pp-prev, .portfolio-popup .pp-main .pp-main-inner .pp-next{
     position: fixed;
     top: 50%;
     width: 40px;
@@ -1105,16 +1120,16 @@ Portfolio Popup
     transition: 0.3s ease;
     text-align: center;
     z-index: 1000;
-    cursor: pointer;
     opacity: .5;
     color: var(--black-600);
 }
-.portfolio-popup .pp-main .pp-main-inner .pp-prev:hover,
-.portfolio-popup .pp-main .pp-main-inner .pp-next:hover{
+.portfolio-popup .pp-main .pp-main-inner .pp-prev, .portfolio-popup .pp-main .pp-main-inner .pp-next:hover{
+    cursor: pointer;
+}
+.portfolio-popup .pp-main .pp-main-inner .pp-prev:hover, .portfolio-popup .pp-main .pp-main-inner .pp-next:hover{
     opacity: 1;
 }
-.portfolio-popup .pp-main .pp-main-inner .pp-prev i,
-.portfolio-popup .pp-main .pp-main-inner .pp-next i{
+.portfolio-popup .pp-main .pp-main-inner .pp-prev i, .portfolio-popup .pp-main .pp-main-inner .pp-next i{
     line-height: 40px;
     font-size: 45px;
 }
@@ -1187,16 +1202,18 @@ Portfolio Popup
     margin-top: 30px;
 }
 .testimonial-section .testi-slider-control span{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
     display: inline-block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     color: var(--skin-color);
     font-size: 27px;
     text-align: center;
-    cursor: pointer;
-    margin: 0 5px;
     transition: all 0.3s ease;
+}
+.testimonial-section .testi-slider-control span:hover{
+    cursor: pointer;
 }
 .testimonial-section .testi-slider-control span::after{
     border-radius: 50%;
@@ -1211,7 +1228,7 @@ Portfolio Popup
 .contact-section .contact-item{
     flex: 0 0 33.33%;
     max-width: 33.33%;
-    padding:15px;
+    padding: 15px;
 }
 .contact-section .contact-item-inner{
     padding: 30px 15px;
@@ -1284,12 +1301,11 @@ Portfolio Popup
     padding: 0 15px;
 }
 ::-webkit-scrollbar{
+    transition: 0.3s;
     width: 8px;
 }
-::-webkit-scrollbar-track::after{
-    background-color: var(--black-900);
-}
 ::-webkit-scrollbar-thumb{
+    transition: 0.3s;
     border-radius: 50px;
     background-color: var(--skin-color);
 }
