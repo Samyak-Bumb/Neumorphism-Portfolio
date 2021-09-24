@@ -5,7 +5,7 @@
     padding: 15px;
     width: 200px;
     z-index: 101;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     border-radius: 5px;
     transform: translateX(100%);
 }
@@ -39,7 +39,7 @@
 }
 .style-switcher h4{
     margin-bottom: 10px;
-    color:var(--black-700);
+    color: var(--black-700);
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
@@ -55,6 +55,8 @@
     height: 30px;
     display: inline-block;
     border-radius: 50%;
+}
+.style-switcher .colors span:hover{
     cursor: pointer;
 }
 .style-switcher span.red{
