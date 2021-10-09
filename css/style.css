@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
     --black-50: #eff0f4;
-    --black-50-opacity: rgba(255, 255, 255, .5);
+    --black-50-opacity: rgba(255,255,255,0.5);
     --black-100: #dddddd;
     --black-300: #bbbbbb;
     --black-600: #666666;
@@ -14,7 +14,7 @@
 }
 body.dark{
     --black-50: #2b2c2f;
-    --black-50-opacity: rgba(43, 44, 47, .5);
+    --black-50-opacity: rgba(43,44,47,0.5);
     --black-100: #353535;
     --black-600: #bbbbbb;
     --black-700: #ffffff;
@@ -25,8 +25,8 @@ body.dark{
     --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
 }
@@ -44,7 +44,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.5;
     background-color: var(--black-50);
-    transition: 0.3s ease-in;
+    transition: 300ms ease-in;
     overflow-x: hidden;
 }
 body.stop-scrolling{
@@ -63,7 +63,6 @@ img{
 }
 button{
     border: none;
-    outline: none;
 }
 .container{
     max-width: 80%;
@@ -95,11 +94,11 @@ button{
 .hover-in-shadow:after{
     content: ' ';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    transition: 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    transition: 300ms ease-in-out;
     z-index: -1;
 }
 .hover-in-shadow:hover:after{
@@ -111,12 +110,12 @@ button{
 .btn-1{
     display: inline-block;
     padding: 10px 25px;
-    color: var(--skin-color);
     font-size: 16px;
     font-weight: 500;
-    background-color: transparent;
     line-height: 1.5;
     border-radius: 30px;
+    color: var(--skin-color);
+    background: transparent;
 }
 .btn-1:hover{
     cursor: pointer;
@@ -152,13 +151,10 @@ button{
     justify-content: space-between;
     flex-wrap: wrap;
     animation: TB 3s ease infinite;
-    /* !important (TB=TopBottom)*/
 }
 @keyframes TB
-/* !important */
 {
-    0%,
-    100%{
+    0%,100%{
         transform: translateY(0);
     }
     50%{
@@ -181,13 +177,10 @@ button{
     border-radius: 50%;
     opacity: 0.8;
     animation: LR 3s ease-in-out infinite;
-    /* !important (LR=LeftRight)*/
 }
 @keyframes LR
-/* !important */
 {
-    0%,
-    100%{
+    0%,100%{
         transform: translateX(0);
     }
     50%{
@@ -276,7 +269,7 @@ button{
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    background-color: var(--black-50);
+    background: var(--black-50);
 }
 .preloader.fade-out{
     opacity: 0;
@@ -336,7 +329,7 @@ button{
     height: 40px;
     display: flex;
     border-radius: 50%;
-    transition: 0.3s ease-in-out;
+    transition: 300ms ease-in-out;
 }
 .header .menu:hover{
     cursor: pointer;
@@ -395,7 +388,7 @@ button{
     visibility: visible;
     z-index: 1000;
     opacity: 1;
-    animation: fadeOut 0.3s ease-out;
+    animation: fadeOut 300ms ease-out;
 }
 @keyframes fadeOut{
     0%{
@@ -424,7 +417,7 @@ button{
     border-radius: 50%;
     font-size: 35px;
     color: var(--black-600);
-    transition: all 0.3s ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .nav-menu-close:hover{
     cursor: pointer;
@@ -456,7 +449,7 @@ button{
     font-weight: 600;
     color: var(--black-600);
     border-radius: 30px;
-    transition: all 0.3s ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .nav-menu-inner ul li a.active{
     color: var(--skin-color);
@@ -503,8 +496,8 @@ button{
     color: var(--black-900);
 }
 .home-section .home-text h1::selection{
-    background: var(--skin-color);
     color: var(--black-900);
+    background: var(--skin-color);
 }
 .home-section .home-text h2{
     font-size: 20px;
@@ -547,14 +540,14 @@ button{
 }
 .about-section .about-img .social-links a{
     display: inline-block;
-    height: 40px;
+    margin: 0 4px;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     font-size: 17px;
     text-align: center;
     color: var(--black-600);
-    margin: 0 4px;
-    transition: all 0.3s ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .about-section .about-img .social-links a::after{
     border-radius: 50%;
@@ -570,15 +563,15 @@ button{
     border-radius: 5px;
 }
 .about-section .about-info{
+    padding: 0 15px;
     flex: 0 0 60%;
     max-width: 60%;
-    padding: 0 15px;
 }
 .about-section .about-info p{
+    margin-bottom: 15px;
     font-size: 16px;
     color: var(--black-600);
     line-height: 30px;
-    margin-bottom: 15px;
 }
 .about-section .about-info span{
     font-weight: 600;
@@ -601,7 +594,7 @@ button{
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
-    transition: all 0.3s ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .about-section .about-tabs .tab-item:hover{
     cursor: pointer;
@@ -770,7 +763,7 @@ button{
     text-align: center;
     width: 100%;
     height: 100%;
-    transition: 0.3s ease-in-out;
+    transition: 300ms ease-in-out;
 }
 .services-section .services-item-inner .icon{
     width: 60px;
@@ -779,7 +772,7 @@ button{
     border-radius: 50%;
     text-align: center;
     color: var(--black-600);
-    transition: 0.3s ease;
+    transition: 300ms ease;
     position: relative;
 }
 .services-section .services-item-inner .icon:after{
@@ -789,7 +782,7 @@ button{
     left: 0;
     height: 100%;
     width: 100%;
-    transition: 0.3s ease;
+    transition: 300ms ease;
     border-radius: 50%;
 }
 .services-section .services-item-inner:hover .icon{
@@ -810,7 +803,7 @@ button{
     color: var(--black-700);
     margin: 0 0 10px;
     text-transform: capitalize;
-    transition: 0.3s ease;
+    transition: 300ms ease;
 }
 .services-section .services-item-inner p{
     font-size: 16px;
@@ -818,9 +811,6 @@ button{
     line-height: 26px;
     margin: 0;
 }
-/* ==========
-Portfolio Section
-========== */
 .portfolio-section{
     padding: 80px 0;
     min-height: 100vh;
@@ -844,7 +834,7 @@ Portfolio Section
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
-    transition: all 0.3s ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .portfolio-section .portfolio-tabs .tab-item:hover{
     cursor: pointer;
@@ -858,10 +848,10 @@ Portfolio Section
 }
 .portfolio-section .portfolio-item{
     display: flex;
+    padding: 15px;
     flex: 0 0 33.33%;
     flex-wrap: wrap;
     max-width: 33.33%;
-    padding: 15px;
 }
 .portfolio-section .portfolio-item.hide{
     display: none;
@@ -886,7 +876,7 @@ Portfolio Section
     border-radius: 5px;
     width: 100%;
     height: 220px;
-    transition: 0.3s ease;
+    transition: 300ms ease;
 }
 .portfolio-section .portfolio-item-inner:hover .portfolio-item-img img{
     transform: translateY(-25px);
@@ -900,7 +890,7 @@ Portfolio Section
     text-transform: capitalize;
     color: var(--skin-color);
     transform: translateY(-5px);
-    transition: 0.3s ease;
+    transition: 300ms ease;
     opacity: 0;
 }
 .portfolio-section .portfolio-item-inner:hover .portfolio-item-img .view-project{
@@ -927,26 +917,26 @@ Portfolio Section
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s ease;
+    transition: 300ms ease;
 }
 .portfolio-popup.open{
     opacity: 1;
     visibility: visible;
 }
 .portfolio-popup .pp-loader{
+    display: flex;
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     z-index: 105;
-    background-color: var(--black-50-opacity);
-    display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--black-50-opacity);
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s ease;
+    transition: 300ms ease;
 }
 .portfolio-popup .pp-loader.active{
     visibility: visible;
@@ -958,16 +948,16 @@ Portfolio Section
     border: 4px solid var(--skin-color);
     border-radius: 50%;
     border-right: 4px solid transparent;
-    animation: spin 0.5s linear infinite;
+    animation: spin 500ms linear infinite;
 }
 .portfolio-popup .pp-details{
+    margin: auto;
     max-width: 1350px;
     max-width: calc(85% + 40px);
-    margin: auto;
     max-height: 0;
-    overflow: hidden;
     opacity: 0;
-    transition: 0.5s ease;
+    transition: 500ms ease;
+    overflow: hidden;
 }
 .portfolio-popup .pp-details.active{
     opacity: 1;
@@ -998,10 +988,10 @@ Portfolio Section
     text-transform: capitalize;
 }
 .portfolio-popup .pp-details-inner .pp-project-details h3{
+    margin-bottom: 15px;
     font-size: 20px;
     font-weight: 600;
     color: var(--black-600);
-    margin-bottom: 15px;
     text-transform: capitalize;
 }
 .portfolio-popup .description{
@@ -1010,10 +1000,10 @@ Portfolio Section
     padding: 0 20px;
 }
 .portfolio-popup .pp-details-inner .description p{
-    font-size: 16px;
-    color: var(--black-600);
-    line-height: 26px;
     margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black-600);
 }
 .portfolio-popup .info{
     flex: 0 0 35%;
@@ -1037,19 +1027,19 @@ Portfolio Section
     margin-bottom: 0;
 }
 .portfolio-popup .separator{
+    display: block;
     height: 1px;
     width: 100%;
-    background-color: var(--black-100);
-    display: block;
+    background: var(--black-100);
 }
 .portfolio-popup .pp-main{
+    display: flex;
+    margin: auto;
     min-height: 100vh;
     max-width: 1350px;
     width: 85%;
-    margin: auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 .portfolio-popup .pp-main .pp-main-inner{
     padding: 70px 0 50px;
@@ -1057,16 +1047,16 @@ Portfolio Section
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-details-btn{
     position: absolute;
-    left: 0;
-    top: 15px;
+    padding: 0 15px;
     height: 40px;
+    top: 15px;
+    left: 0;
     font-size: 16px;
     font-weight: 600;
-    color: var(--skin-color);
     line-height: 40px;
-    padding: 0 15px;
     border-radius: 30px;
-    transition: 0.3s ease;
+    color: var(--skin-color);
+    transition: 300ms ease;
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-details-btn:hover{
     cursor: pointer;
@@ -1088,7 +1078,7 @@ Portfolio Section
     text-align: center;
     line-height: 37px;
     color: var(--black-600);
-    transition: 0.3s ease;
+    transition: 300ms ease;
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-close:hover{
     cursor: pointer;
@@ -1114,14 +1104,14 @@ Portfolio Section
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-prev, .portfolio-popup .pp-main .pp-main-inner .pp-next{
     position: fixed;
-    top: 50%;
     width: 40px;
     height: 40px;
-    transition: 0.3s ease;
+    top: 50%;
     text-align: center;
     z-index: 1000;
-    opacity: .5;
+    opacity: 0.5;
     color: var(--black-600);
+    transition: 300ms ease;
 }
 .portfolio-popup .pp-main .pp-main-inner .pp-prev, .portfolio-popup .pp-main .pp-main-inner .pp-next:hover{
     cursor: pointer;
@@ -1145,10 +1135,10 @@ Portfolio Section
     min-height: 100vh;
 }
 .testimonial-section .testi-box{
-    width: 100%;
-    max-width: 600px;
     margin: auto;
     padding: 0 15px;
+    max-width: 600px;
+    width: 100%;
 }
 .testimonial-section .testi-slider{
     border-radius: 5px;
@@ -1168,7 +1158,7 @@ Portfolio Section
     position: absolute;
     font-size: 38px;
     color: var(--skin-color);
-    opacity: .2;
+    opacity: 0.2;
 }
 .testimonial-section .testi-slider .testi-item i.left{
     top: 5px;
@@ -1179,10 +1169,10 @@ Portfolio Section
     right: 5px;
 }
 .testimonial-section .testi-slider .testi-item p{
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 26px;
     color: var(--black-600);
-    margin-bottom: 30px;
 }
 .testimonial-section .testi-slider .testi-item img{
     width: 100%;
@@ -1207,10 +1197,10 @@ Portfolio Section
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    color: var(--skin-color);
     font-size: 27px;
     text-align: center;
-    transition: all 0.3s ease;
+    color: var(--skin-color);
+    transition: all 300ms ease;
 }
 .testimonial-section .testi-slider-control span:hover{
     cursor: pointer;
@@ -1231,33 +1221,32 @@ Portfolio Section
     padding: 15px;
 }
 .contact-section .contact-item-inner{
-    padding: 30px 15px;
-    text-align: center;
-    border-radius: 5px;
     display: flex;
+    padding: 30px 15px;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    text-align: center;
+    border-radius: 5px;
 }
 .contact-section .contact-item-inner i{
     color: var(--skin-color);
     font-size: 30px;
 }
 .contact-section .contact-item-inner p{
+    margin: 15px 0 10px;
     font-size: 18px;
     font-weight: 600;
-    color: var(--black-700);
-    margin: 15px 0 10px;
     text-transform: capitalize;
+    color: var(--black-700);
 }
 .contact-section .contact-item-inner span{
     display: block;
     font-size: 16px;
-    color: var(--black-600);
     line-height: 26px;
-    margin: 0;
     word-break: break-all;
     letter-spacing: 2px;
+    color: var(--black-600);
 }
 .contact-section .contact-form{
     flex: 0 0 100%;
@@ -1271,27 +1260,27 @@ Portfolio Section
 }
 .contact-section .input-group{
     margin: 0 0 25px;
-    transition: 0.3s ease;
+    transition: 300ms ease;
     border-radius: 30px;
 }
 .contact-section .input-group::after{
     border-radius: 30px;
 }
 .contact-section .input-group .input-control{
+    display: block;
+    padding: 0 15px;
     max-width: 100%;
     width: 100%;
     height: 45px;
-    display: block;
-    background-color: transparent;
-    padding: 0 15px;
     border: none;
     border-radius: 30px;
     font-size: 16px;
     color: var(--skin-color);
+    background: transparent;
 }
 .contact-section .input-group textarea.input-control{
-    height: 184px;
     padding: 15px;
+    height: 184px;
     resize: none;
 }
 .contact-section .submit-btn{
@@ -1301,11 +1290,11 @@ Portfolio Section
     padding: 0 15px;
 }
 ::-webkit-scrollbar{
-    transition: 0.3s;
+    transition: 300ms;
     width: 8px;
 }
 ::-webkit-scrollbar-thumb{
-    transition: 0.3s;
+    transition: 300ms;
     border-radius: 50px;
     background-color: var(--skin-color);
 }
